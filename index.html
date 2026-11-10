@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forge Fitness Studio | Gym, Classes and Personal Training in Dewas, Madhya Pradesh</title>
+  <meta name="description" content="Forge Fitness Studio is a fictional demo gym offering strength, HIIT, yoga, boxing, spin and conditioning classes, flexible memberships and a free trial class. Book a trial online.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Forge Fitness Studio home">
+        <svg class="logo-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M6.5 6.5v11h-2.3a1.2 1.2 0 0 1-1.2-1.2V7.7a1.2 1.2 0 0 1 1.2-1.2h2.3zm11 0h2.3a1.2 1.2 0 0 1 1.2 1.2v8.6a1.2 1.2 0 0 1-1.2 1.2h-2.3v-11zM8.8 8.8h6.4v6.4H8.8V8.8z"/></svg>
+        <span>Forge <strong>Fitness Studio</strong></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#classes">Classes</a>
+        <a href="#pricing">Membership</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#faq">FAQ</a>
+        <a href="#booking" class="btn btn-primary nav-cta">Book a Free Trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Strength. Conditioning. Community.</p>
+        <h1>Train hard. Recover smart. <span class="accent">Stay consistent.</span></h1>
+        <p class="hero-sub">Forge Fitness Studio runs coach-led strength, HIIT, yoga, boxing, spin and conditioning classes every day of the week. First trial class is free, no card required.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary">Book a Free Trial</a>
+          <a href="#classes" class="btn btn-ghost">View Class Timings</a>
+        </div>
+        <dl class="hero-facts">
+          <div><dt>Open</dt><dd>Mon to Sat, 5:30 AM to 10:00 PM</dd></div>
+          <div><dt>Sunday</dt><dd>7:00 AM to 12:00 PM</dd></div>
+          <div><dt>Location</dt><dd>1st Floor, Malwa Plaza, AB Road, Dewas, Madhya Pradesh</dd></div>
+          <div><dt>Trial class</dt><dd>Free, one per person</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CLASSES -->
+    <section class="section" id="classes">
+      <div class="container">
+        <h2>Classes this week</h2>
+        <p class="section-sub">Every class is coach-led and capped at 20 people so you get real attention. Spots update live on this page.</p>
+        <div class="class-grid" id="classGrid"></div>
+        <p class="note">Timings shown are for the current week. Holiday schedules are posted on the notice board at the studio.</p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <h2>Membership plans</h2>
+        <p class="section-sub">No joining fee. Pause your membership for up to 30 days a year. Cancel anytime after the first month.</p>
+        <div class="billing-toggle" role="group" aria-label="Billing period">
+          <button class="toggle-btn active" id="toggleMonthly" type="button">Monthly billing</button>
+          <button class="toggle-btn" id="toggleAnnual" type="button">Annual billing, save 20%</button>
+        </div>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <h3>Monthly</h3>
+            <p class="plan-price"><span class="currency">Rs.</span> <span id="priceMonthly">2,500</span><span class="per">/month</span></p>
+            <p class="plan-billed" id="billedMonthly">Billed monthly. No lock-in.</p>
+            <ul>
+              <li>All group classes</li>
+              <li>Gym floor access, all hours</li>
+              <li>Locker and shower access</li>
+              <li>Starter fitness assessment</li>
+            </ul>
+            <a href="#booking" class="btn btn-ghost plan-btn" data-plan="Monthly">Choose Monthly</a>
+          </article>
+          <article class="plan-card plan-featured">
+            <p class="plan-badge">Most popular</p>
+            <h3>Quarterly</h3>
+            <p class="plan-price"><span class="currency">Rs.</span> <span id="priceQuarterly">6,500</span><span class="per">/3 months</span></p>
+            <p class="plan-billed" id="billedQuarterly">Works out to about Rs. 2,167 per month.</p>
+            <ul>
+              <li>Everything in Monthly</li>
+              <li>1 personal training session per month</li>
+              <li>Diet starter plan with a coach</li>
+              <li>Guest pass, 1 per month</li>
+            </ul>
+            <a href="#booking" class="btn btn-primary plan-btn" data-plan="Quarterly">Choose Quarterly</a>
+          </article>
+          <article class="plan-card">
+            <h3>Annual</h3>
+            <p class="plan-price"><span class="currency">Rs.</span> <span id="priceAnnual">18,000</span><span class="per">/year</span></p>
+            <p class="plan-billed" id="billedAnnual">Works out to Rs. 1,500 per month.</p>
+            <ul>
+              <li>Everything in Quarterly</li>
+              <li>2 personal training sessions per month</li>
+              <li>Full diet plan and quarterly reviews</li>
+              <li>2 guest passes per month</li>
+            </ul>
+            <a href="#booking" class="btn btn-ghost plan-btn" data-plan="Annual">Choose Annual</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINERS -->
+    <section class="section" id="trainers">
+      <div class="container">
+        <h2>Meet the coaches</h2>
+        <p class="section-sub">Certified coaches, small batches, and a plan that fits your level.</p>
+        <div class="trainer-grid" id="trainerGrid"></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section section-alt" id="booking">
+      <div class="container booking-wrap">
+        <div class="booking-copy">
+          <h2>Book a free trial class</h2>
+          <p>Fill in the form and we will hold a spot for you. We confirm every booking by phone or WhatsApp within 2 working hours. Your details stay in your browser and are not sent anywhere, this is a demo.</p>
+          <ul class="booking-points">
+            <li>One free trial class per person</li>
+            <li>Bring workout shoes and a water bottle</li>
+            <li>Arrive 15 minutes early for your first visit</li>
+          </ul>
+        </div>
+        <form id="bookingForm" novalidate>
+          <div class="field">
+            <label for="fName">Full name</label>
+            <input type="text" id="fName" name="name" placeholder="Your name" autocomplete="name">
+            <p class="field-error" id="errName"></p>
+          </div>
+          <div class="field">
+            <label for="fPhone">Phone number</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="10 digit mobile number" autocomplete="tel">
+            <p class="field-error" id="errPhone"></p>
+          </div>
+          <div class="field">
+            <label for="fEmail">Email</label>
+            <input type="email" id="fEmail" name="email" placeholder="you@example.com" autocomplete="email">
+            <p class="field-error" id="errEmail"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="fClass">Class</label>
+              <select id="fClass" name="class"></select>
+            </div>
+            <div class="field">
+              <label for="fDay">Preferred day</label>
+              <select id="fDay" name="day">
+                <option value="">Select a day</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+              </select>
+              <p class="field-error" id="errDay"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fTime">Preferred time</label>
+            <select id="fTime" name="time">
+              <option value="">Select a time slot</option>
+              <option>Morning (5:30 AM to 9:00 AM)</option>
+              <option>Midday (11:00 AM to 2:00 PM)</option>
+              <option>Evening (5:00 PM to 8:00 PM)</option>
+              <option>Night (8:00 PM to 10:00 PM)</option>
+            </select>
+            <p class="field-error" id="errTime"></p>
+          </div>
+          <div class="field">
+            <label for="fMessage">Anything we should know? <span class="optional">(optional)</span></label>
+            <textarea id="fMessage" name="message" rows="3" placeholder="Injuries, goals, experience level..."></textarea>
+          </div>
+          <p class="field-error" id="errClass"></p>
+          <button type="submit" class="btn btn-primary btn-block">Request Trial Booking</button>
+          <p class="form-note">Demo form. Nothing is submitted or stored.</p>
+          <div class="confirmation" id="confirmation" role="status" hidden>
+            <h3>Booking requested</h3>
+            <p id="confirmationText"></p>
+            <p>Reference number: <strong id="confirmationRef"></strong></p>
+            <p class="confirmation-note">Show this reference at the front desk. In a real gym, the team would call you to confirm.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <h2>Frequently asked questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">What are the gym timings?</button>
+            <div class="faq-a"><p>Monday to Saturday, 5:30 AM to 10:00 PM. Sunday, 7:00 AM to 12:00 PM. The gym floor stays open through all hours, with coached classes at fixed slots.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">How does the free trial class work?</button>
+            <div class="faq-a"><p>Pick any group class and book through the form above. One free trial per person. Arrive 15 minutes early so a coach can show you around and check your form on the basics.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">Can I freeze my membership?</button>
+            <div class="faq-a"><p>Yes. Every membership can be paused for up to 30 days in a year, in blocks of at least 7 days. Tell the front desk 2 days before you want the freeze to start.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">Do you help with diet and nutrition?</button>
+            <div class="faq-a"><p>Quarterly and Annual plans include a diet plan built with a coach, with vegetarian options. Monthly members can add a one-off diet consultation for Rs. 500.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">Is parking available?</button>
+            <div class="faq-a"><p>Yes. Free two-wheeler parking in the basement and paid four-wheeler parking nearby. The studio is on AB Road, a 5 minute walk from the Dewas bus stand.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">What is the refund policy?</button>
+            <div class="faq-a"><p>Unused membership can be refunded within 7 days of purchase, minus the sessions already used. Trial classes are free and carry no refund. Annual plans refunded after 7 days are calculated on a pro-rata basis.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">Do I need prior experience to join a class?</button>
+            <div class="faq-a"><p>No. Every class has beginner, intermediate and advanced options, and coaches scale the workout to your level. Tell us about any injury in the booking form so the coach can plan around it.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Forge Fitness Studio</p>
+        <p>1st Floor, Malwa Plaza, AB Road, Dewas, Madhya Pradesh</p>
+        <p>Open Mon to Sat, 5:30 AM to 10:00 PM. Sunday, 7:00 AM to 12:00 PM.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="#classes">Classes</a>
+        <a href="#pricing">Membership</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#booking">Book a Trial</a>
+      </nav>
+    </div>
+    <p class="demo-note">Demo / Concept project by Vedansh Vyas. Fictional gym, sample content.</p>
+  </footer>
+
+  <!-- CHATBOT -->
+  <div class="chat-widget">
+    <button class="chat-toggle" id="chatToggle" aria-expanded="false" aria-controls="chatPanel" aria-label="Open demo assistant chat">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a8 8 0 0 0-8 8c0 1.6.5 3.1 1.3 4.3L4 18l3.9-1.2c.9.4 1.9.7 3.1.7a8 8 0 0 0 8-8 8 8 0 0 0-8-8zM9 9.5h2v5H9v-5zm4 0h2v5h-2v-5z"/></svg>
+      <span class="chat-toggle-label">Ask us</span>
+    </button>
+    <div class="chat-panel" id="chatPanel" hidden>
+      <div class="chat-header">
+        <div>
+          <p class="chat-title">Forge Assistant</p>
+          <p class="chat-subtitle">Demo assistant, rule-based, no AI API</p>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">X</button>
+      </div>
+      <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+      <div class="chat-quick">
+        <button type="button" data-q="What are the membership prices?">Prices</button>
+        <button type="button" data-q="What time are classes?">Class timings</button>
+        <button type="button" data-q="How do I book a free trial?">Free trial</button>
+        <button type="button" data-q="Where is the gym?">Location</button>
+      </div>
+      <form class="chat-form" id="chatForm">
+        <label class="visually-hidden" for="chatInput">Type your question</label>
+        <input type="text" id="chatInput" placeholder="Ask about classes, prices, timings..." autocomplete="off">
+        <button type="submit" class="btn btn-primary chat-send">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
